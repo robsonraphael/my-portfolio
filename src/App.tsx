@@ -1,10 +1,12 @@
 // Components
-import { Home } from "./components/home";
+import { Header } from "./components/header";
+import { Global } from "./style/global";
 
 function App() {
   return (
     <>
-      <Home />
+      <Header />
+      <Global />
     </>
   );
 }
