@@ -1,20 +1,32 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import svg from "../../assets/Logo.svg";
+import { motion } from "framer-motion";
 
-export const Container = styled.header`
+export const Container = styled(motion.header)`
   width: 100%;
   height: 5em;
   padding: 0.4em;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(40, 40, 40);
+  background-color: #24283b;
   position: sticky;
+
+  @media (max-width: 768px) {
+    height: 4.5em;
+    padding: 0.3em;
+  }
 `;
-export const Logo = styled.a`
-  font-size: 1.3em;
+export const Logo = styled.img.attrs({
+  src: svg,
+})`
+  @media (max-width: 768px) {
+    width: 65px;
+    height: 55px;
+  }
 `;
 
-export const Nav = styled.nav<{ active: string }>`
+export const Nav = styled(motion.nav)<{ active: string }>`
   display: ${(props) => props.active};
   gap: 1em;
   position: absolute;
@@ -27,13 +39,16 @@ export const Nav = styled.nav<{ active: string }>`
   a {
     padding: 0.7em;
     border-radius: 0.2em;
-    background-color: rgb(40, 40, 40);
-    color: white;
+    color: #bb9af7;
     font-weight: bolder;
+    transition: ease-in-out 0.3s;
 
+    &:hover {
+      color: #e0af68;
+    }
     &:focus {
-      background-color: rgb(200, 200, 200);
-      color: black;
+      background-color: #1a1b26;
+      color: #7aa2f7;
     }
   }
 
@@ -47,30 +62,23 @@ export const Nav = styled.nav<{ active: string }>`
     font-weight: 450;
 
     a {
-      color: white;
-      padding: 1.2em 1em;
+      padding: 1.6em 0.8em;
       border-radius: 0.2em;
-
-      &:focus {
-        background-color: rgb(250, 250, 250);
-        color: black;
-      }
     }
   }
 `;
-export const Link = styled.a`
+export const Link = styled(motion.a)`
   padding: 0.3em;
-  color: black;
 `;
-export const Button = styled.button`
+
+export const Button = styled(motion.button)`
   border: none;
   background: none;
-  font-size: 1.8em;
+  font-size: 1.7em;
   display: flex;
   padding: 0.2em;
   cursor: pointer;
-  color: white;
-
+  color: #a9b1d6;
   @media (min-width: 768px) {
     display: none;
   }
