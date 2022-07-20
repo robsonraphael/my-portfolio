@@ -1,8 +1,11 @@
 {
-  "homepage": "http://robsonraphael.github.io/my-portifolio",
+  "homepage": "https://robsonraphael-portifolio.herokuapp.com/",
   "name": "my-portifolio",
+  "author": "robson raphael",
+  "email": "robsonraphaelwork@gmail.com",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
