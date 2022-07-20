@@ -18,7 +18,7 @@ export const Content = () => {
         </Ani>
       </Title>
       <Text>
-        Meu nome é Robson, sou Desenvolvedor Front-end Freelancer. Apaixonado
+        Meu nome é Robson, sou Desenvolvedor Front-end e Freelancer nas horas vagas. Apaixonado
         por tecnologia, musica e esportes ! Tente olhar meu{" "}
         <a href="#">portifólio</a> e me seguir nas redes sociais! 🫠
       </Text>
