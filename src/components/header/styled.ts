@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import svg from "../../assets/Logo.svg";
 import { motion } from "framer-motion";
 import { Colors } from "../../style/global";
@@ -31,18 +31,19 @@ export const Nav = styled(motion.nav)<{ active: string }>`
 
   position: absolute;
   left: 0;
-  top: 4.5em;
+  top: 4.6em;
 
   width: 100%;
+  height: 100vh;
   padding: 1em;
-  background-color: ${Colors.Comet};
+  background-color: ${Colors.Ebony};
 
   a {
     width: 90%;
     padding: 0.5em;
     border-radius: 0.2em;
 
-    font-size: 1.4em;
+    font-size: 1.3em;
     color: ${Colors.Portage};
     text-align: center;
     font-weight: 600;
@@ -50,7 +51,7 @@ export const Nav = styled(motion.nav)<{ active: string }>`
 
     &:focus {
       color: ${Colors.Feijoa};
-      background-color: ${Colors.Ebony};
+      background-color: ${Colors.Mirage};
     }
   }
 
@@ -64,6 +65,7 @@ export const Nav = styled(motion.nav)<{ active: string }>`
 
     padding: 0.5em;
     width: fit-content;
+    height: fit-content;
     background: none;
 
     a {
@@ -93,37 +95,6 @@ export const Button = styled(motion.button)`
   cursor: pointer;
   color: ${Colors.Biloba};
   @media (min-width: 770px) {
-    display: none;
-  }
-`;
-export const SocialMedia = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.2em;
-  a {
-    color: ${Colors.Biloba};
-    transition: ease-in 0.25s;
-    &:hover{
-      color: ${Colors.Desert};
-    }
-
-    &:nth-child(1){
-      &:focus{
-        color: #171515;
-      }
-    }
-    &:nth-child(2){
-      &:focus{
-        color: #0274b3;
-      }
-    }
-    &:nth-child(3){
-      &:focus{
-        color: #bf3188;
-      }
-    }
-  }
-  @media (max-width: 770px){
     display: none;
   }
 `;

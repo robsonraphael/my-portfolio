@@ -1,12 +1,6 @@
 import { useState } from "react";
-import { Container, Logo, Nav, Link, Button, SocialMedia } from "./styled";
-import {
-  FaHamburger,
-  FaRegTimesCircle,
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-} from "react-icons/fa";
+import { Container, Logo, Nav, Link, Button } from "./styled";
+import { FaHamburger, FaRegTimesCircle } from "react-icons/fa";
 
 export const Header: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
@@ -25,36 +19,13 @@ export const Header: React.FC = () => {
         animate={isActive ? "open" : "closed"}
         variants={slide}
       >
-        <Link href="#about" whileFocus={{ scale: 1.1 }}>
-          About
-        </Link>
-        <Link href="#contact" whileFocus={{ scale: 1.1 }}>
-          CV
-        </Link>
-        <Link href="#experience" whileFocus={{ scale: 1.1 }}>
-          Experience
-        </Link>
-        <Link href="#contact" whileFocus={{ scale: 1.1 }}>
-          Gallery
-        </Link>
-        <Link href="#work" whileFocus={{ scale: 1.1 }}>
-          Work
-        </Link>
-        <Link href="#contact" whileFocus={{ scale: 1.1 }}>
-          Contact
-        </Link>
+        <Link href="#about">About</Link>
+        <Link href="#contact">CV</Link>
+        <Link href="#experience">Experience</Link>
+        <Link href="#contact">Gallery</Link>
+        <Link href="#work">Work</Link>
+        <Link href="#contact">Contact</Link>
       </Nav>
-      <SocialMedia>
-        <Link href="http://www.github.com/robsonraphael" target="_blank">
-          <FaGithub size="2em"/>
-        </Link>
-        <Link href="#" target="_blank">
-          <FaLinkedin size="2.1em"/>
-        </Link>
-        <Link href="#" target="_blank">
-          <FaInstagram size="2.2em"/>
-        </Link>
-      </SocialMedia>
       <Button
         onClick={() => setIsActive(!isActive)}
         whileHover={{ scale: 1.1 }}
