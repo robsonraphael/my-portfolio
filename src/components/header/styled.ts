@@ -6,7 +6,7 @@ import { Colors } from "../../style/global";
 export const Container = styled.header`
   position: sticky;
   width: 100%;
-  height: 5em;
+  height: 6em;
   padding: 0.4em;
 
   display: flex;
@@ -16,22 +16,29 @@ export const Container = styled.header`
 
   // Desktop
   @media (max-width: 770px) {
-    height: 4.5em;
+    height: 5em;
     padding: 0.3em;
   }
 `;
-export const Logo = styled.img.attrs({ src: svg })``;
+export const Logo = styled.img.attrs({ src: svg })`
+  width: 60px;
+  height: 60px;
+  @media (min-width: 768px){
+    width: 65px;
+    height: 65px;
+  }
+`;
 
 export const Nav = styled(motion.nav)<{ active: string }>`
   display: ${(props) => props.active};
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  gap: 1.4em;
+  gap: 1.5em;
 
   position: absolute;
   left: 0;
-  top: 4.6em;
+  top: 5.1em;
 
   width: 100%;
   height: 100vh;
@@ -40,7 +47,7 @@ export const Nav = styled(motion.nav)<{ active: string }>`
 
   a {
     width: 90%;
-    padding: 0.5em;
+    padding: 1em 0.5em;
     border-radius: 0.2em;
 
     font-size: 1.3em;
@@ -75,9 +82,8 @@ export const Nav = styled(motion.nav)<{ active: string }>`
         color: ${Colors.Desert};
       }
       &:focus {
-        background-color: ${Colors.Mirage};
         color: ${Colors.Feijoa};
-        padding: 1.3em;
+        background: none;
       }
     }
   }
