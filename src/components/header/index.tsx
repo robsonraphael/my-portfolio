@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
-import { Colors } from "../../style/global";
-
-/* Styled Components */
 import { Container, Logo, Nav, Link, Button } from "./styled";
-
-/* Icons */
 import { FaHamburger, FaRegTimesCircle } from "react-icons/fa";
 
 export const Header: React.FC = () => {
@@ -16,10 +11,10 @@ export const Header: React.FC = () => {
 
   useEffect(() => {
     let url = document.URL;
-    let parse = url.split('/')[3]
+    let parse = url.split("/")[3];
     if (RegExp("about").test(url)) {
       let link = document.querySelector(`a[href="${parse}"]`) as HTMLElement;
-      link.style.color = Colors.Feijoa
+      link.style.color = "#9ECE6A";
     }
   });
 
@@ -34,9 +29,7 @@ export const Header: React.FC = () => {
         variants={slide}
         id="nav"
       >
-        <Link href="about">
-          About
-        </Link>
+        <Link href="about">About</Link>
         <Link
           href="https://www.linkedin.com/in/robson-raphael-42a628224/"
           target="_blank"
@@ -48,11 +41,7 @@ export const Header: React.FC = () => {
         <Link href="/work">Work</Link>
         <Link href="/contact">Contact</Link>
       </Nav>
-      <Button
-        onClick={() => setIsActive(!isActive)}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
+      <Button onClick={() => setIsActive(!isActive)} whileTap={{ scale: 0.9 }}>
         <FaHamburger display={isActive ? "none" : "flex"} />
         <FaRegTimesCircle display={!isActive ? "none" : "flex"} />
       </Button>

@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { Colors } from "../../style/global";
 
 export const Container = styled.main`
-  background-color: ${Colors.Mirage};
+  background-color: ${(props) => props.theme.colors.Mirage};
+
   display: flex;
   flex-direction: column;
   gap: 2em;
+
   width: 100%;
   height: 100%;
   padding: 2em;
@@ -15,12 +16,14 @@ export const Container = styled.main`
     font-size: 0.9em;
     font-weight: lighter;
   }
+
   div {
     strong {
       display: flex;
       color: white;
       font-size: 1em;
 
+      // Desktop
       @media (min-width: 768px) {
         font-size: 1.1em;
       }
@@ -32,6 +35,7 @@ export const Title = styled.h1`
   font-size: 1.2em;
   font-weight: 400;
 
+  // Desktop
   @media (min-width: 768px) {
     font-size: 1.3em;
   }
@@ -41,24 +45,26 @@ export const Text = styled.p`
   width: 90%;
   font-size: 0.9em;
 
+  a {
+    color: white;
+    font-weight: bolder;
+  }
+
   strong {
     display: flex;
     color: white;
     font-size: 1.1em;
 
+    // Desktop
     @media (min-width: 768px) {
       font-size: 1.11em;
     }
   }
 
+  // Desktop
   @media (min-width: 768px) {
     font-size: 1em;
     width: 85%;
-  }
-
-  a {
-    color: white;
-    font-weight: bolder;
   }
 `;
 export const Wrap = styled.div`
@@ -70,6 +76,7 @@ export const Wrap = styled.div`
     width: 30px;
     height: 30px;
 
+    // Desktop
     @media (min-width: 768px) {
       width: 40px;
       height: 40px;
@@ -77,27 +84,28 @@ export const Wrap = styled.div`
   }
 `;
 export const By = styled.aside`
-  display: flex;
-  align-items: center;
-  gap: 0.2em;
+  display: none;
 
-  transform: rotate(90deg);
-  position: absolute;
-  right: -50px;
-  top: 50%;
+  // Desktop
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
 
-  color: ${Colors.Biloba};
-  font-size: 0.8em;
-  font-weight: bold;
+    transform: rotate(90deg);
+    position: absolute;
+    right: -50px;
+    top: 50%;
 
-  @media (max-width: 768px) {
-    display: none;
+    color: ${(props) => props.theme.colors.Biloba};
+    font-size: 0.8em;
+    font-weight: bold;
   }
 `;
 export const SocialMedia = styled.div`
-  gap: 0.5em;
   display: flex;
   align-items: center;
+  gap: 0.5em;
   font-size: 1.3em;
   margin: 2.5em auto;
 
@@ -105,9 +113,10 @@ export const SocialMedia = styled.div`
     cursor: pointer;
     transition: ease-in 0.25s;
     text-decoration: none;
-    color: ${Colors.Portage};
+    color: ${(props) => props.theme.colors.Portage};
+
     &:hover {
-      color: ${Colors.Desert};
+      color: ${(props) => props.theme.colors.Desert};
     }
 
     &:focus {
@@ -134,6 +143,8 @@ export const SocialMedia = styled.div`
       }
     }
   }
+
+  // Desktop
   @media (min-width: 768px) {
     font-size: 1.4em;
   }

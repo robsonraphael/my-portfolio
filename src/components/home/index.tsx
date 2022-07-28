@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 /* Styled components */
 import { Container, Image, Text, Title, By, Ani, SocialMedia } from "./styled";
 
@@ -8,11 +10,27 @@ import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { FaDev, FaGithub } from "react-icons/fa";
 
 export const Home: React.FC = () => {
+  const [hello, setHello] = useState(String);
+
+  useEffect(() => {
+    const hello: string[] = [
+      "Oi",
+      "Hi",
+      "Hola",
+      "Salve",
+      "Haigh",
+      "Hoi",
+      "Hai",
+    ];
+    const hi: string = hello[Math.floor(Math.random() * hello.length)];
+    setHello(hi);
+  });
+
   return (
     <Container>
       <Image />
       <Title>
-        Hii{" "}
+        <span>{hello}</span>
         <Ani
           animate={{ rotate: [-15, 30, -15, 30, 0], scale: [1.1, 1] }}
           transition={{ delay: 3, repeat: Infinity, repeatDelay: 5 }}

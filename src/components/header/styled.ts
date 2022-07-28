@@ -1,29 +1,29 @@
 import styled from "styled-components";
 import svg from "../../assets/Logo.svg";
 import { motion } from "framer-motion";
-import { Colors } from "../../style/global";
 
 export const Container = styled.header`
-  position: sticky;
-  width: 100%;
-  height: 6em;
-  padding: 0.4em;
+  height: 5em;
+  padding: 0.3em;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: ${Colors.Ebony};
+  background-color: ${(props) => props.theme.colors.Ebony};
 
   // Desktop
-  @media (max-width: 770px) {
-    height: 5em;
-    padding: 0.3em;
+  @media (min-width: 770px) {
+    width: 100%;
+    height: 6em;
+    padding: 0.4em;
   }
 `;
 export const Logo = styled.img.attrs({ src: svg })`
   width: 60px;
   height: 60px;
-  @media (min-width: 768px){
+
+  // Desktop
+  @media (min-width: 768px) {
     width: 65px;
     height: 65px;
   }
@@ -37,13 +37,14 @@ export const Nav = styled(motion.nav)<{ active: string }>`
   gap: 1.5em;
 
   position: absolute;
+  top: 12%;
   left: 0;
-  top: 5.1em;
+  z-index: 99;
 
   width: 100%;
   height: 100vh;
   padding: 1em;
-  background-color: ${Colors.Ebony};
+  background-color: ${(props) => props.theme.colors.Ebony};
 
   a {
     width: 90%;
@@ -51,20 +52,22 @@ export const Nav = styled(motion.nav)<{ active: string }>`
     border-radius: 0.2em;
 
     font-size: 1.3em;
-    color: ${Colors.Portage};
+    color: ${(props) => props.theme.colors.Portage};
     text-align: center;
     font-weight: 600;
     transition: ease-in-out 0.3s;
 
     &:focus {
-      color: ${Colors.Feijoa};
-      background-color: ${Colors.Mirage};
+      color: ${(props) => props.theme.colors.Feijoa};
+      background-color: ${(props) => props.theme.colors.Mirage};
     }
   }
 
   // Desktop
   @media (min-width: 770px) {
-    position: initial;
+    position: static;
+    z-index: 1;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -78,11 +81,13 @@ export const Nav = styled(motion.nav)<{ active: string }>`
     a {
       font-size: 1em;
       width: calc(fit-content + 3%);
+
       &:hover {
-        color: ${Colors.Desert};
+        color: ${(props) => props.theme.colors.Desert};
       }
+
       &:focus {
-        color: ${Colors.Feijoa};
+        color: ${(props) => props.theme.colors.Feijoa};
         background: none;
       }
     }
@@ -95,11 +100,15 @@ export const Link = styled(motion.a)`
 export const Button = styled(motion.button)`
   border: none;
   background: none;
+
   font-size: 1.7em;
+  color: ${(props) => props.theme.colors.Biloba};
+
   display: flex;
   padding: 0.2em;
   cursor: pointer;
-  color: ${Colors.Biloba};
+
+  // Desktop
   @media (min-width: 770px) {
     display: none;
   }
