@@ -7,9 +7,13 @@ Meu Portfólio, atualmente em construção 🚧. Utilizando React pela facilidad
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
+## Preview
 
 ### Desktop
 ![screen-shoot-desktop](./%20assets/desktop.png)
 
 ### Mobile
 ![screen-shoot-mobile](./%20assets/mobile.png)
+
+## License
+[MIT License](./LICENSE)
