@@ -24,8 +24,8 @@ export const Logo = styled.img.attrs({ src: svg })`
 
   // Desktop
   @media (min-width: 768px) {
-    width: 65px;
-    height: 65px;
+    width: 70px;
+    height: 70px;
   }
 `;
 
@@ -34,7 +34,7 @@ export const Nav = styled(motion.nav)<{ active: string }>`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  gap: 1.5em;
+  gap: 1em;
 
   position: absolute;
   top: 12%;
@@ -51,7 +51,7 @@ export const Nav = styled(motion.nav)<{ active: string }>`
     padding: 1em 0.5em;
     border-radius: 0.2em;
 
-    font-size: 1.3em;
+    font-size: 20px;
     color: ${(props) => props.theme.colors.Portage};
     text-align: center;
     font-weight: 600;
@@ -79,7 +79,7 @@ export const Nav = styled(motion.nav)<{ active: string }>`
     background: none;
 
     a {
-      font-size: 1em;
+      font-size: 16px;
       width: calc(fit-content + 3%);
 
       &:hover {
@@ -101,7 +101,7 @@ export const Button = styled(motion.button)`
   border: none;
   background: none;
 
-  font-size: 1.7em;
+  font-size: 30px;
   color: ${(props) => props.theme.colors.Biloba};
 
   display: flex;

@@ -30,12 +30,6 @@ export const Header: React.FC = () => {
         id="nav"
       >
         <Link href="about">About</Link>
-        <Link
-          href="https://www.linkedin.com/in/robson-raphael-42a628224/"
-          target="_blank"
-        >
-          CV
-        </Link>
         <Link href="/experience">Experience</Link>
         <Link href="/contact">Gallery</Link>
         <Link href="/work">Work</Link>
