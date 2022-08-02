@@ -1,18 +1,22 @@
 import { useState, useEffect } from "react";
+
+// Styled components
 import { Container, Logo, Nav, Link, Button } from "./styled";
+
+// Icons
 import { FaHamburger, FaRegTimesCircle } from "react-icons/fa";
 
 export const Header: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
-  const slide = {
+  const slide: {} = {
     open: { opacity: [0, 1], x: [-400, 0] },
     closed: { opacity: 1, x: 0 },
   };
 
   useEffect(() => {
-    let url = document.URL;
-    let parse = url.split("/")[3];
+    const url: string = document.URL;
     if (RegExp("about").test(url)) {
+      let parse: string = url.split("/")[3];
       let link = document.querySelector(`a[href="${parse}"]`) as HTMLElement;
       link.style.color = "#9ECE6A";
     }
