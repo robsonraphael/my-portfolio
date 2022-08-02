@@ -13,32 +13,33 @@ export const Container = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.4em;
 `;
 
 export const Image = styled.img.attrs({
   src: "https://avatars.githubusercontent.com/u/79436128?v=4",
 })`
-  width: 240px;
-  height: 240px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   margin-top: 2em;
   margin-bottom: 0.9em;
 
   // Desktop
   @media (min-width: 768px) {
-    width: 260px;
-    height: 260px;
+    margin-top: 1em;
+    width: 250px;
+    height: 250px;
   }
 `;
 
 export const Text = styled.p`
-  font-size: 0.95em;
+  font-size: 14px;
+  line-height: 24px;
   color: white;
-  line-height: 1.5em;
-  letter-spacing: 0.1em;
-  text-align: center;
-  width: 90%;
+  width: 80%;
+  text-align: left;
+  margin-top: 5px;
 
   a {
     font-weight: 500;
@@ -51,12 +52,16 @@ export const Text = styled.p`
 
   // Desktop
   @media (min-width: 768px) {
-    font-size: 1em;
+    font-size: 16px;
+    line-height: 30px;
+    width: 62%;
   }
-  @media (min-width: 820px) {
-    width: 50%;
+
+  @media (min-width: 900px){
+    width: 40%;
   }
 `;
+
 export const Title = styled.div`
   display: flex;
   align-items: center;
@@ -64,7 +69,8 @@ export const Title = styled.div`
 
   span {
     letter-spacing: 0.1em;
-    font-size: 1.5em;
+    font-size: 20px;
+    letter-spacing: 2px;
     font-weight: bolder;
     color: ${(props) => props.theme.colors.Mint};
   }
@@ -72,7 +78,7 @@ export const Title = styled.div`
   // Desktop
   @media (min-width: 768px) {
     span {
-      font-size: 1.6em;
+      font-size: 22px;
     }
   }
 `;
@@ -85,29 +91,30 @@ export const By = styled.div`
     align-items: center;
     gap: 0.2em;
 
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     position: absolute;
-    left: -50px;
+    left: -45px;
     top: 50%;
 
     color: ${(props) => props.theme.colors.Biloba};
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-weight: bold;
+    font-style: italic;
   }
 `;
 export const Ani = styled(motion.div)`
-  font-size: 1.3em;
+  font-size: 22px;
 
   // Desktop
   @media (min-width: 768px) {
-    font-size: 1.4em;
+    font-size: 25px;
   }
 `;
 export const SocialMedia = styled.div`
   gap: 0.5em;
   display: flex;
   align-items: center;
-  font-size: 1.3em;
+  font-size: 18px;
   margin-top: 2.5em;
 
   a {
@@ -116,8 +123,10 @@ export const SocialMedia = styled.div`
     text-decoration: none;
     color: ${(props) => props.theme.colors.Portage};
 
-    &:hover {
-      color: ${(props) => props.theme.colors.Desert};
+    @media (min-width: 768px) {
+      &:hover {
+        color: ${(props) => props.theme.colors.Desert};
+      }
     }
 
     &:focus {
@@ -143,5 +152,10 @@ export const SocialMedia = styled.div`
         color: #28a0d5;
       }
     }
+  }
+
+  @media (min-width: 768px){
+    font-size: 20px;
+    gap: 0.6em;
   }
 `;
