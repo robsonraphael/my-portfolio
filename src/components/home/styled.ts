@@ -21,7 +21,7 @@ export const Image = styled(motion.img).attrs({
   animate: { opacity: 1 },
   transition: { duration: 0.3 },
 })`
-  border-radius: 50%;
+  border-radius: 100%;
   margin-top: 2em;
   margin-bottom: 0.9em;
   height: 250px;

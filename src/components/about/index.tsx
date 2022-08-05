@@ -36,7 +36,7 @@ export const About: React.FC = () => {
           <Text>
             Atualmente estou mergulhando no mundo Back-end, Cloud e UI/UX. Venho
             sempre usando meu tempo livre para aprender, publicar e ensinar
-            novas tecnologias!
+            novas tecnologias!      
           </Text>
         </Wrap>
         <Wrap>
