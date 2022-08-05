@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import JPEG from "../../assets/m3.jpg";
 
 export const Container = styled.main`
   width: 100%;
@@ -15,22 +16,20 @@ export const Container = styled.main`
 `;
 
 export const Image = styled(motion.img).attrs({
-  src: "https://avatars.githubusercontent.com/u/79436128?v=4",
+  src: JPEG,
   initial: { opacity: 0 },
   animate: { opacity: 1 },
   transition: { duration: 0.3 },
 })`
-  width: 200px;
-  height: 200px;
   border-radius: 50%;
   margin-top: 2em;
   margin-bottom: 0.9em;
+  height: 250px;
 
   // Desktop
   @media (min-width: 768px) {
     margin-top: 1em;
-    width: 250px;
-    height: 250px;
+    height: 300px;
   }
 `;
 

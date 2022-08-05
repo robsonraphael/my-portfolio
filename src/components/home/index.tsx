@@ -27,7 +27,7 @@ export const Home: React.FC = () => {
   return (
     <>
       <Container>
-        <Image />
+        <Image/>
         <Title>
           <Msg>{hello}</Msg>
           <Emoji>👋🏾</Emoji>
