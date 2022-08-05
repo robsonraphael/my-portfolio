@@ -9,13 +9,13 @@ export const Wrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 20px;
   padding: 1em;
 
   background-color: #232433;
 
   @media (min-width: 768px) {
-    font-size: 21px;
+    font-size: 22px;
     gap: 0.6em;
   }
 `;

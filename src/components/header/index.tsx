@@ -6,7 +6,7 @@ import { Container, Logo, Nav, Link, Button } from "./styled";
 // Icons
 import { FaHamburger, FaRegTimesCircle } from "react-icons/fa";
 
-export const Header: React.FC = () => {
+export const Header : React.FC = () => {
   const [isActive, setIsActive] = useState(false);
   const slide: {} = {
     open: { opacity: [0, 1], x: [-400, 0] },
@@ -15,10 +15,18 @@ export const Header: React.FC = () => {
 
   useEffect(() => {
     const url: string = document.URL;
-    if (RegExp("about").test(url)) {
-      let parse: string = url.split("/")[3];
-      let link = document.querySelector(`a[href="${parse}"]`) as HTMLElement;
-      link.style.color = "#9ECE6A";
+    let parse: string = url.split("/")[3];
+    switch (parse) {
+      case "about":
+        let about = document.querySelector('a[href="about"]') as HTMLElement;
+        about.style.color = "#9ECE6A";
+        break;
+      case "experience":
+        let experience = document.querySelector(
+          'a[href="experience"]'
+        ) as HTMLElement;
+        experience.style.color = "#9ECE6A";
+        break;
     }
   });
 
@@ -34,10 +42,9 @@ export const Header: React.FC = () => {
         id="nav"
       >
         <Link href="about">About</Link>
-        <Link href="/experience">Experience</Link>
+        <Link href="experience">Experience</Link>
         <Link href="/contact">Gallery</Link>
         <Link href="/work">Work</Link>
-        <Link href="/contact">Contact</Link>
       </Nav>
       <Button onClick={() => setIsActive(!isActive)} whileTap={{ scale: 0.9 }}>
         <FaHamburger display={isActive ? "none" : "flex"} />

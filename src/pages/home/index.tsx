@@ -5,7 +5,7 @@ import { Container, Image, Text, Title, By, Emoji, Msg } from "./styled";
 import { HiCode } from "react-icons/hi";
 
 // Components
-import { SocialMedia } from "../social";
+import { SocialMedia } from "../../components/social";
 
 export const Home: React.FC = () => {
   const [hello, setHello] = useState(String);
@@ -27,7 +27,7 @@ export const Home: React.FC = () => {
   return (
     <>
       <Container>
-        <Image/>
+        <Image />
         <Title>
           <Msg>{hello}</Msg>
           <Emoji>👋🏾</Emoji>

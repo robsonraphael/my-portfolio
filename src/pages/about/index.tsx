@@ -4,7 +4,7 @@ import React from "react";
 import { Container, Title, Text, Brads, Wrap, Quote } from "./styled";
 
 // Components
-import { SocialMedia } from "../social";
+import { SocialMedia } from "../../components/social";
 
 export const About: React.FC = () => {
   return (
@@ -36,7 +36,7 @@ export const About: React.FC = () => {
           <Text>
             Atualmente estou mergulhando no mundo Back-end, Cloud e UI/UX. Venho
             sempre usando meu tempo livre para aprender, publicar e ensinar
-            novas tecnologias!      
+            novas tecnologias!
           </Text>
         </Wrap>
         <Wrap>
