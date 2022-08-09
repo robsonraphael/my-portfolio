@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-
 // Icons
 import { Container, Image, Text, Title, By, Emoji, Msg } from "./styled";
 import { HiCode } from "react-icons/hi";
-
 // Components
 import { SocialMedia } from "../../components/social";
 
@@ -33,9 +31,7 @@ export const Home: React.FC = () => {
           <Emoji>👋🏾</Emoji>
         </Title>
         <Text>
-          Meu nome é Robson, sou Desenvolvedor Front-end e Freelancer nas horas
-          vagas. Apaixonado por tecnologia, musica e esportes ! Tente olhar meu{" "}
-          <a href="#">portifólio</a> e me seguir nas redes sociais! 🫠
+          Meu nome é Robson, sou Desenvolvedor Front-end. Estou buscando novos desafios na minha carreira profissional, gosto de atuar diretamente com o cliente, buscando entender a sua necessidade e entregando o esperado para o produto. Apaixonado por tecnologia desde novo, gosto de escutar música e práticar esportes como hobby! caso queira me conhecer melhor, tente olhar meu portfólio e me seguir nas redes sociais! 🫠
         </Text>
         <By>
           <HiCode /> by Robson Raphael
