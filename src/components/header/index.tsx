@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
-
 // Styled components
 import { Container, Logo, Nav, Link, Button } from "./styled";
-
 // Icons
 import { FaHamburger, FaRegTimesCircle } from "react-icons/fa";
 
