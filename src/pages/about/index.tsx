@@ -1,8 +1,6 @@
 import React from "react";
-
 // Styled components
 import { Container, Title, Text, Brads, Wrap, Quote } from "./styled";
-
 // Components
 import { SocialMedia } from "../../components/social";
 
@@ -10,14 +8,14 @@ export const About: React.FC = () => {
   return (
     <>
       <Container>
-        <Title>Salve, sou Robson Raphael 🖖🏾</Title>
+        <Title>Robson Raphael;</Title>
         <Wrap>
           <Text>
             <strong>Quem sou eu ?</strong>
             Eu poderia dizer que sou uma pessoa que gosta de passar o tempo
             programando, praticando esportes ou escutando música. Esta é uma
             definição perfeita de mim mesmo! Tenho 20 anos, nascido e criado em
-            Pernambuco 🌵. Atualmente trabalhando como Freelancer. Sou
+            Pernambuco 🌵. Atualmente buscando minha primeira oportunidade de emprego como desenvolvedor. Sou
             Desenvolvedor FullStack, hoje em dia estou em um ponto onde desing e
             código se cruzam.
           </Text>
@@ -34,14 +32,22 @@ export const About: React.FC = () => {
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" />
           </Brads>
           <Text>
-            Atualmente estou mergulhando no mundo Back-end, Cloud e UI/UX. Venho
-            sempre usando meu tempo livre para aprender, publicar e ensinar
-            novas tecnologias!
+            Atualmente estou mergulhando no mundo Web e Cloud. Venho sempre
+            usando meu tempo livre para aprender, ensinar e escrever artigos
+            sobre tecnologias!
           </Text>
         </Wrap>
         <Wrap>
+          <strong>Ferramentas</strong>
+          <Brads>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" />
+          </Brads>
+        </Wrap>
+        <Wrap>
           <Text>
-            Estou sempre aberto para trocar ideias e colaborar em projetos, você
+            Estou sempre aberto para conversar e colaborar em projetos, você
             pode me seguir nas redes sociais ou entrar em contato comigo pelo
             meu <a href="mailto:robsonraphaelwork@gmail.com">e-mail.</a>
           </Text>
